@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Background */
+.app-container {
   min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Card */
+.weather-card {
+  background: white;
+  width: 350px;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #1e293b;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.search-box button:hover {
+  background: #1e40af;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Error */
+.error {
+  margin-top: 12px;
+  color: red;
 }
+
+/* Result */
+.result {
+  margin-top: 25px;
+}
+
+.result h3 {
+  font-size: 20px;
+  color: #334155;
+}
+
+.result img {
+  width: 80px;
+}
+
+.result h1 {
+  font-size: 42px;
+  color: #0f172a;
+}
+
+.condition {
+  font-size: 18px;
+  color: #475569;
+}
+
+.suggestions {
+  list-style: none;
+  margin-top: 5px;
+  padding: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: #e0f2fe;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.suggestions {
+  position: absolute;
+  top: 45px; /* below input */
+  left: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: #e0f2fe;
+}
+.suggestions {
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+
